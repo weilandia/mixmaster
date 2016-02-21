@@ -32,10 +32,16 @@ gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'capybara'
   gem 'pry-rails'
+  gem 'launchy'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
